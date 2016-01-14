@@ -1,4 +1,4 @@
-# vZoom <small>Quickly maximize & unmaximize the current window</small>
+# vZoom `v0.1` - <small>Quickly maximize & unmaximize the current window</small>
 
 ## What you need to know
 
