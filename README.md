@@ -1,4 +1,7 @@
-# vZoom `v0.1` - <small>Quickly maximize & unmaximize the current window</small>
+# vZoom - <small>Quickly maximize & unmaximize the current window</small>
+
+![Badge version](https://img.shields.io/badge/version-0.1-blue.svg?style=flat-square "Badge for version")
+![License version](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square "Badge for license")
 
 ## What you need to know
 
