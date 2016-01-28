@@ -1,6 +1,6 @@
 " vZoom, quickly (un)zoom the current vim window
 
-" VERSION      : 0.1
+" VERSION      : 0.2
 " CREATION     : 2016-01-14
 " MODIFICATION : 2016-01-29
 " MAINTAINER   : Kabbaj Amine <amine.kabb@gmail.com>
