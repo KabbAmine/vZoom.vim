@@ -3,11 +3,11 @@
 ![Badge version](https://img.shields.io/badge/version-0.1-blue.svg?style=flat-square "Badge for version")
 ![License version](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square "Badge for license")
 
-## What you need to know
+## Usage
 
 Define your mapping:
 
-```
+```vim
 nmap gsz <Plug>(vzoom)
 ```
 
@@ -17,6 +17,14 @@ Then use it to maximize/unmaximize your current window.
 
 Even quicker, just leave the maximized window and it will get its initial size back.
 
+## Commands
+
+You can enable/disable automatic zoom with:
+
+```vim
+:VZoomAutoToggle
+```
+
 ## Installation
 
 Copy the distributed files into Vim runtime directory which is usually `~/.vim/`, or `$HOME/vimfiles` on Windows.
@@ -25,8 +33,8 @@ Or in a better way, use a vim plugin manager:
 
 e.g with [Vim-plug](https://github.com/junegunn/vim-plug) plus lazyloading:
 
-```
-Plug 'KabbAmine/vZoom.vim', {'on': '<Plug>(vzoom)'}
+```vim
+Plug 'KabbAmine/vZoom.vim', {'on': ['<Plug>(vzoom)', 'VZoomAutoToggle']}
 ```
 
 ## Notes
