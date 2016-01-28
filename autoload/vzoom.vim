@@ -52,6 +52,25 @@ function! vzoom#Toggle(...) abort " {{{1
 		call s:Augroup(0)
 	endif
 endfunction
+function! vzoom#AutoToggle() abort " {{{1
+	if !exists('g:vzoom_auto')
+		let g:vzoom_auto = 1
+		call s:Zoom()
+		augroup VzoomAuto
+			autocmd!
+			autocmd WinEnter * :call s:Zoom()
+		augroup END
+	else
+		unlet! g:vzoom_auto
+		call s:Unzoom()
+		wincmd =
+		if exists('#VzoomAuto')
+			augroup VzoomAuto
+				autocmd!
+			augroup END
+		endif
+	endif
+endfunction
 " }}}
 
 " vim:ft=vim:fdm=marker:fmr={{{,}}}:

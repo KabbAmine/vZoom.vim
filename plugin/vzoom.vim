@@ -2,7 +2,7 @@
 
 " VERSION      : 0.1
 " CREATION     : 2016-01-14
-" MODIFICATION : 2016-01-14
+" MODIFICATION : 2016-01-29
 " MAINTAINER   : Kabbaj Amine <amine.kabb@gmail.com>
 " LICENSE      : MIT
 
@@ -22,6 +22,8 @@ if hasmapto('<Plug>(vzoom)')
 	nnoremap <unique> <script> <Plug>(vzoom) <SID>vzoom
 	nnoremap <silent> <SID>vzoom :call vzoom#Toggle()<CR>
 endif
+" And one command {{{1
+command! VZoomAutoToggle :call vzoom#AutoToggle()
 " }}}
 
 " Restore default vim options {{{1
