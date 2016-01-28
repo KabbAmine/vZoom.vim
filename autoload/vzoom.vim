@@ -38,6 +38,7 @@ function! s:Augroup(mode) abort " {{{1
 			augroup Vzoom
 				autocmd!
 			augroup END
+			augroup! Vzoom
 		endif
 	endif
 endfunction
@@ -71,6 +72,7 @@ function! vzoom#AutoToggle() abort " {{{1
 			augroup VzoomAuto
 				autocmd!
 			augroup END
+			augroup! VzoomAuto
 		endif
 	endif
 endfunction
