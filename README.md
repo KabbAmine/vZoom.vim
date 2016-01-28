@@ -25,6 +25,8 @@ You can enable/disable automatic zoom with:
 :VZoomAutoToggle
 ```
 
+Note that for disabling auto-zoom, you can either use the command above or the `<Plug>(vzoom)` key mapping.
+
 ## Installation
 
 Copy the distributed files into Vim runtime directory which is usually `~/.vim/`, or `$HOME/vimfiles` on Windows.

@@ -47,6 +47,9 @@ function! vzoom#Toggle() abort " {{{1
 	if empty(getwinvar(winnr(), 'vzoom')) && s:Wins() !=# 1
 		call s:Zoom()
 		call s:Augroup(1)
+	elseif exists('g:vzoom_auto')
+		call vzoom#AutoToggle()
+		call s:Augroup(0)
 	else
 		call s:Unzoom()
 		call s:Augroup(0)
