@@ -3,12 +3,12 @@
 " MAINTAINER   : Kabbaj Amine <amine.kabb@gmail.com>
 " LICENSE      : MIT
 
-function! s:Zoom(...) abort " {{{1
+function! s:Zoom() abort " {{{1
 	call setwinvar('%', 'vzoom', winrestcmd())
 	wincmd _
 	wincmd |
 endfunction
-function! s:Unzoom(...) abort " {{{1
+function! s:Unzoom() abort " {{{1
 	execute getwinvar('%', 'vzoom')
 	unlet! w:vzoom
 endfunction
@@ -43,7 +43,7 @@ function! s:Augroup(mode) abort " {{{1
 endfunction
 " }}}
 
-function! vzoom#Toggle(...) abort " {{{1
+function! vzoom#Toggle() abort " {{{1
 	if empty(getwinvar(winnr(), 'vzoom')) && s:Wins() !=# 1
 		call s:Zoom()
 		call s:Augroup(1)
