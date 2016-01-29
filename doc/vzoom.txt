@@ -62,7 +62,7 @@ For disabling it, you can either use the command above or the `<Plug>(vzoom)`
 key mapping.
 
 ========================================================================
-4. |CONFIGURATION|
+5. |CONFIGURATION|
 *vZoom-config*
 
 The plugin's configuration is stored in one global dictionnary `g:vzoom`.
@@ -79,7 +79,7 @@ Or:
 				\ 'option2': 0
 			\ }
 <
-4.1. |OPTIONS|
+5.1. |OPTIONS|
 *vZoom-config:options*
 
 | option             | description                                            | default             |
@@ -96,7 +96,7 @@ NOTE:
   `g:vzoom.equalise_windows` value.
 
 ========================================================================
-5. |NOTES|
+6. |NOTES|
 *vZoom-notes*
 
 Thanks To Bram Moolenaar for creating the best piece of software in the world
