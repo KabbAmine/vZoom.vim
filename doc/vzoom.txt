@@ -1,0 +1,108 @@
+*vZoom*		Quickly maximize & unmaximize the current window
+
+	For Vim version 7.0 and above	Last change: 2016-01-29
+
+	VZOOM - QUICKLY MAXIMIZE & UNMAXIMIZE THE CURRENT WINDOW~
+						from Kabbaj Amine
+
+Mail	: amine.kabb@gmail.com
+Repo	: https://github.com/KabbAmine/vZoom.vim
+License : MIT
+
+========================================================================
+|CONTENTS|						*vZoom-contents*
+
+1. DESCRIPTION					|vZoom-description|
+2. INSTALLATION					|vZoom-installation|
+3. MAPPINGS						|vZoom-usage|
+4. COMMANDS						|vZoom-commands|
+5. CONFIGURATION				|vZoom-config|
+	5.1. OPTIONS				|vZoom-options|
+6. NOTES						|vZoom-notes|
+
+========================================================================
+1. |DESCRIPTION|
+*vZoom-description*
+
+This plugin allows to maximize/unmaximize the current window manually or
+automatically.
+
+========================================================================
+2. |INSTALLATION|
+*vZoom-installation*
+
+Use your preferred method to install the plugin. I recommend you to use a
+plugin manager.
+
+e.g with [Vim-plug](https://github.com/junegunn/vim-plug)
+>
+	Plug 'KabbAmine/vZoom.vim', {'on': ['<Plug>(vzoom)', 'VZoomAutoToggle']}
+<
+========================================================================
+3. |MAPPINGS|
+*vZoom-mappings*
+
+No mapping by default, define your own.
+>
+	nmap gsz <Plug>(vzoom)
+<
+Use it to maximize/unmaximize your current window.
+Even quicker, just leave the maximized window and it will get its initial size
+back.
+
+========================================================================
+4. |COMMANDS|
+*vZoom-commands*
+
+You can enable automatic zoom with:
+>
+	VZoomAutoToggle
+<
+For disabling it, you can either use the command above or the `<Plug>(vzoom)`
+key mapping.
+
+========================================================================
+4. |CONFIGURATION|
+*vZoom-config*
+
+The plugin's configuration is stored in one global dictionnary `g:vzoom`.
+To define/modify an option you can either:
+>
+	let g:vzoom = {}
+	let g:vzoom.option1 = 'foo'
+	let g:vzoom.option2 = 0
+<
+Or:
+>
+	let g:vzoom = {
+				\ 'option1': 'foo',
+				\ 'option2': 0
+			\ }
+<
+4.1. |OPTIONS|
+*vZoom-config:options*
+
+| option             | description                                            | default             |
+| ----------------   | ------------------------------------------------------ | ------------------- |
+| `equalise_windows`   | Equalise size of windows (`<C-w>=`) after unmaximizing   | `0`                   |
+
+NOTE:
+
+- The plugin uses `setwinvar()` function to set back the initial size of the
+  window, but unfortunately sometimes it can fail. So to prevent strange
+  behavior, always set `g:vzoom.equalise_windows` to `1`.
+- For the same reason above, when using `VZoomAutoToggle` and disabling
+  auto-zoom the windows are always resized equally regardless of the
+  `g:vzoom.equalise_windows` value.
+
+========================================================================
+5. |NOTES|
+*vZoom-notes*
+
+Thanks To Bram Moolenaar for creating the best piece of software in the world
+:D
+
+Thanks To you if you're using vZoom.
+
+========================================================================
+vim:tw=78:ts=4:ft=help:norl:noet
