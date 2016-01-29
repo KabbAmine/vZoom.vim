@@ -3,6 +3,11 @@
 " MAINTAINER   : Kabbaj Amine <amine.kabb@gmail.com>
 " LICENSE      : MIT
 
+" Get configuration {{{1
+"	.equalise_windows => Equalise size of windows after dezooming (1)
+let s:config = g:vzoom
+" }}}
+
 function! s:Zoom() abort " {{{1
 	call setwinvar('%', 'vzoom', winrestcmd())
 	wincmd _
@@ -11,6 +16,9 @@ endfunction
 function! s:Unzoom() abort " {{{1
 	execute getwinvar('%', 'vzoom')
 	unlet! w:vzoom
+	if s:config.equalise_windows
+		wincmd =
+	endif
 	call s:Autocmd(0)
 endfunction
 function! s:Wins() abort " {{{1

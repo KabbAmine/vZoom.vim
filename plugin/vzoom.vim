@@ -17,6 +17,15 @@ let s:saveCpoptions = &cpoptions
 set cpoptions&vim
 " 1}}}
 
+" Configuration {{{1
+if !exists('g:vzoom')
+	let g:vzoom = {}
+endif
+if !has_key(g:vzoom, 'equalise_windows')
+	let g:vzoom.equalise_windows = 0
+endif
+" }}}
+
 " One mapping {{{1
 if hasmapto('<Plug>(vzoom)')
 	nnoremap <unique> <script> <Plug>(vzoom) <SID>vzoom
