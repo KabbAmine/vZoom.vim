@@ -1,5 +1,5 @@
 " CREATION     : 2016-01-14
-" MODIFICATION : 2016-01-29
+" MODIFICATION : 2016-01-31
 " MAINTAINER   : Kabbaj Amine <amine.kabb@gmail.com>
 " LICENSE      : MIT
 
@@ -21,19 +21,6 @@ function! s:Unzoom() abort " {{{1
 	endif
 	call s:Autocmd(0)
 endfunction
-function! s:Wins() abort " {{{1
-	" Return number of windows in current tab
-
-	let l:cw = winnr()
-	let l:wins = 1
-	wincmd w
-	while winnr() !=# l:cw
-		let l:wins += 1
-		wincmd w
-	endwhile
-	execute l:cw . 'wincmd w'
-	return l:wins
-endfunction
 function! s:Autocmd(mode) abort " {{{1
 	if a:mode
 		augroup Vzoom
@@ -52,7 +39,7 @@ endfunction
 " }}}
 
 function! vzoom#Toggle() abort " {{{1
-	if empty(getwinvar(winnr(), 'vzoom')) && s:Wins() !=# 1
+	if empty(getwinvar(winnr(), 'vzoom')) && winnr('$') !=# 1
 		call s:Zoom()
 		call s:Autocmd(1)
 	elseif exists('g:vzoom_auto')
