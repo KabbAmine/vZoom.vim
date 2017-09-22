@@ -3,8 +3,6 @@
 ![Badge version](https://img.shields.io/badge/version-0.3-blue.svg?style=flat-square "Badge for version")
 ![License version](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square "Badge for license")
 
-** :notebook: NOTE:** I'm using now [Zoomwintab](https://github.com/troydm/zoomwintab.vim) so no new features for vzoom.
-
 ## Description
 
 This plugin allows to maximize/unmaximize the current window:
